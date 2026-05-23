@@ -4,13 +4,11 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Loja da Praia – Aluguel de equipamentos de praia e escola de surf com Bruno Nascimento. Reserve online!"/>
-  <title>Loja da Praia 🏄 Surf & Equipamentos</title>
+  <title>Loja da Praia Surf & Equipamentos</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
-  /* ══════════════════════════════════════════
-     TOKENS & RESET
-  ══════════════════════════════════════════ */
+
   :root{
     --c-deep:#012a4a;
     --c-navy:#023e6b;
@@ -41,15 +39,10 @@
   button{font-family:inherit;cursor:pointer;}
   ul{list-style:none;}
 
-  /* ══════════════════════════════════════════
-     UTILITIES
-  ══════════════════════════════════════════ */
   .container{max-width:1200px;margin-inline:auto;padding-inline:5%;}
   .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
 
-  /* ══════════════════════════════════════════
-     NAV
-  ══════════════════════════════════════════ */
+  /* NAV bar */
   #nav{
     position:fixed;top:0;inset-inline:0;z-index:900;height:var(--nav-h);
     display:flex;align-items:center;justify-content:space-between;
@@ -93,16 +86,14 @@
   }
   .nav-drawer a:hover{color:#fff;background:rgba(255,255,255,.08);}
 
-  /* ══════════════════════════════════════════
-     HERO
-  ══════════════════════════════════════════ */
+
   #hero{
     min-height:100vh;display:flex;align-items:center;justify-content:center;
     text-align:center;padding:calc(var(--nav-h) + 40px) 5% 60px;
     position:relative;overflow:hidden;
     background:linear-gradient(160deg,var(--c-deep) 0%,var(--c-navy) 35%,var(--c-blue) 65%,var(--c-sky) 88%,var(--c-teal) 100%);
   }
-  /* animated bubbles */
+
   .hero-bubbles{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
   .bubble{
     position:absolute;border-radius:50%;
@@ -141,12 +132,12 @@
   .btn-ghost:hover{background:rgba(255,255,255,.2);transform:translateY(-3px);}
   .btn-blue{background:var(--c-blue);color:#fff;box-shadow:0 4px 16px rgba(0,119,182,.4);}
   .btn-blue:hover{background:var(--c-navy);transform:translateY(-2px);}
-  /* stats */
+  
   .hero-stats{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;}
   .hero-stat{text-align:center;}
   .hero-stat strong{display:block;font-size:2rem;font-weight:900;color:#fff;line-height:1;}
   .hero-stat span{font-size:.72rem;color:rgba(173,220,255,.85);text-transform:uppercase;letter-spacing:.6px;margin-top:.2rem;display:block;}
-  /* scroll cue */
+  
   .scroll-cue{
     position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
     display:flex;flex-direction:column;align-items:center;gap:.4rem;
@@ -154,12 +145,10 @@
     animation:scrollBounce 2.2s ease-in-out infinite;
   }
   @keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0)}55%{transform:translateX(-50%) translateY(7px)}}
-  /* wave divider */
+ 
   .wave-divider{position:absolute;bottom:-1px;left:0;width:100%;line-height:0;}
 
-  /* ══════════════════════════════════════════
-     SECTION BASE
-  ══════════════════════════════════════════ */
+
   .section{padding:90px 5%;}
   .section-alt{background:var(--c-bg);}
   .section-dark{background:linear-gradient(135deg,var(--c-deep),var(--c-navy));}
@@ -175,9 +164,7 @@
   .section-header p{color:var(--c-muted);margin-top:.55rem;font-size:.97rem;max-width:540px;margin-inline:auto;}
   .section-header p.light{color:rgba(173,220,255,.85);}
 
-  /* ══════════════════════════════════════════
-     EQUIPAMENTOS
-  ══════════════════════════════════════════ */
+  /* EQUIPAMENTOS */
   .eq-filter{display:flex;gap:.55rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.2rem;}
   .eq-btn{
     background:var(--c-white);border:1.5px solid var(--c-border);color:var(--c-blue);
@@ -220,9 +207,7 @@
   }
   .btn-res:hover{background:var(--c-navy);}
 
-  /* ══════════════════════════════════════════
-     AULAS
-  ══════════════════════════════════════════ */
+  /*  AULAS  */
   .aulas-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;}
   .aula-card{
     background:var(--c-bg);border-radius:var(--radius-lg);padding:1.7rem;
@@ -237,7 +222,7 @@
     background:var(--c-white);border:1px solid var(--c-border);
     border-radius:10px;padding:.22rem .7rem;font-size:.73rem;color:var(--c-blue);font-weight:600;
   }
-  /* sticky form */
+ 
   .form-card{
     background:var(--c-navy);border-radius:var(--radius-xl);padding:2rem;
     color:#fff;position:sticky;top:calc(var(--nav-h) + 16px);
@@ -263,9 +248,7 @@
   .btn-submit:hover{background:var(--c-sand-lt);transform:translateY(-2px);}
   .btn-submit.loading{opacity:.7;pointer-events:none;}
 
-  /* ══════════════════════════════════════════
-     GALERIA
-  ══════════════════════════════════════════ */
+  /* GALERIA */
   .galeria-masonry{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -285,7 +268,7 @@
     color:#fff;font-size:.82rem;font-weight:600;opacity:0;transition:var(--transition);
   }
   .gal-cell:hover .cap{opacity:1;}
-  /* lightbox */
+ 
   #lightbox{
     display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:9999;
     align-items:center;justify-content:center;flex-direction:column;gap:1rem;
@@ -300,9 +283,7 @@
   }
   #lightbox .lb-close:hover{transform:rotate(90deg);}
 
-  /* ══════════════════════════════════════════
-     CONDIÇÕES
-  ══════════════════════════════════════════ */
+  /*  CONDIÇÕES */
   .cond-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:1.2rem;margin-top:2.5rem;}
   .cond-card{
     background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);
@@ -317,7 +298,7 @@
   .badge-ok{background:rgba(80,220,100,.2);color:#7fffb3;}
   .badge-warn{background:rgba(255,200,50,.2);color:#ffe580;}
   .badge-bad{background:rgba(255,80,80,.2);color:#ff9999;}
-  /* week forecast */
+
   .forecast{margin-top:2.5rem;background:rgba(255,255,255,.07);border-radius:var(--radius-lg);padding:1.5rem 2rem;}
   .forecast h4{color:rgba(173,220,255,.9);font-size:.95rem;margin-bottom:1.1rem;font-weight:600;}
   .forecast-days{display:flex;gap:.8rem;overflow-x:auto;padding-bottom:.5rem;}
@@ -331,11 +312,9 @@
   .fd-temp{font-size:.95rem;font-weight:700;color:#fff;}
   .fd-wave{font-size:.65rem;color:rgba(173,220,255,.65);}
 
-  /* ══════════════════════════════════════════
-     RESERVAS
-  ══════════════════════════════════════════ */
+  /* RESERVAS */
   .reservas-wrap{max-width:760px;margin-inline:auto;}
-  /* stepper */
+ 
   .stepper{display:flex;align-items:center;margin-bottom:2rem;}
   .step{flex:1;display:flex;flex-direction:column;align-items:center;position:relative;}
   .step:not(:last-child)::after{
@@ -351,7 +330,7 @@
   .step.active .step-dot{background:var(--c-sand);border-color:var(--c-sand);color:var(--c-navy);}
   .step-lbl{font-size:.7rem;color:#aaa;margin-top:.4rem;text-align:center;}
   .step.done .step-lbl,.step.active .step-lbl{color:var(--c-navy);font-weight:600;}
-  /* form */
+ 
   .res-form{background:var(--c-bg);border-radius:var(--radius-xl);padding:2.4rem;box-shadow:var(--shadow);}
   .flt{margin-bottom:.9rem;}
   .flt label{display:block;font-size:.8rem;color:var(--c-navy);font-weight:600;margin-bottom:.32rem;}
@@ -369,9 +348,7 @@
   }
   .btn-confirm:hover{background:var(--c-navy);transform:translateY(-2px);box-shadow:var(--shadow);}
 
-  /* ══════════════════════════════════════════
-     DEPOIMENTOS
-  ══════════════════════════════════════════ */
+  /*  avaliações */
   .dep-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.5rem;}
   .dep-card{
     background:var(--c-white);border-radius:var(--radius-lg);padding:1.8rem;
@@ -390,9 +367,7 @@
   .dep-author strong{display:block;font-size:.87rem;color:var(--c-navy);}
   .dep-author small{color:#94a3b8;font-size:.74rem;}
 
-  /* ══════════════════════════════════════════
-     CONTATO
-  ══════════════════════════════════════════ */
+  /* CONTATO */
   .contato-grid{display:grid;grid-template-columns:1fr 1.55fr;gap:2.5rem;align-items:start;}
   .contact-info h3{font-size:1.3rem;font-weight:700;color:var(--c-navy);margin-bottom:1.3rem;}
   .cinfo-item{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.2rem;}
@@ -435,9 +410,7 @@
   }
   .map-ph a:hover{background:var(--c-navy);}
 
-  /* ══════════════════════════════════════════
-     FOOTER
-  ══════════════════════════════════════════ */
+  /*  FOOTER */
   footer{background:var(--c-deep);color:rgba(173,220,255,.8);padding:3rem 5% 1.5rem;}
   .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2.5rem;margin-bottom:2.2rem;}
   .fc h4{color:#fff;font-size:.96rem;font-weight:700;margin-bottom:.9rem;}
@@ -456,9 +429,7 @@
   }
   .fsoc a:hover{background:var(--c-sky);color:#fff;}
 
-  /* ══════════════════════════════════════════
-     FLOAT & TOAST
-  ══════════════════════════════════════════ */
+ 
   .fab-wa{
     position:fixed;bottom:28px;right:28px;z-index:800;
     width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;
@@ -472,7 +443,6 @@
   }
   @keyframes pulsRing{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.4);opacity:0}}
 
-  /* toast */
   #toast{
     position:fixed;bottom:100px;right:28px;z-index:1000;
     background:var(--c-navy);color:#fff;padding:1rem 1.4rem;border-radius:var(--radius);
@@ -483,18 +453,14 @@
   #toast.show{transform:translateX(0);}
   #toast .toast-icon{font-size:1.5rem;flex-shrink:0;}
 
-  /* ══════════════════════════════════════════
-     SCROLL REVEAL
-  ══════════════════════════════════════════ */
+ 
   [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
   [data-reveal].visible{opacity:1;transform:translateY(0);}
   [data-reveal="left"]{transform:translateX(-28px);}
   [data-reveal="right"]{transform:translateX(28px);}
   [data-reveal="left"].visible,[data-reveal="right"].visible{transform:translateX(0);}
 
-  /* ══════════════════════════════════════════
-     RESPONSIVE
-  ══════════════════════════════════════════ */
+  /* RESPONSIVIDADE  */
   @media(max-width:960px){
     .aulas-grid,.contato-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr 1fr;}
@@ -517,19 +483,19 @@
 </head>
 <body>
 
-<!-- ══ TOAST ══ -->
+
 <div id="toast" role="alert" aria-live="polite">
   <span class="toast-icon"></span>
   <div><strong>Reserva enviada!</strong><br/>Bruno entrará em contato pelo WhatsApp em breve.</div>
 </div>
 
-<!-- ══ FLOATING WHATSAPP ══ -->
+
 <a class="fab-wa" href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="Contato via WhatsApp">
   <div class="pulse"></div>
   <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- ══ NAV ══ -->
+
 <nav id="nav" aria-label="Menu principal">
   <a class="nav-logo" href="#hero">
     <span class="wave"></span> Loja da&nbsp;<span style="color:var(--c-teal)">Praia</span>
@@ -547,7 +513,7 @@
   <button class="nav-burger" onclick="toggleDrawer()" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
 </nav>
 
-<!-- drawer mobile -->
+
 <div class="nav-drawer" id="drawer" role="dialog" aria-label="Menu mobile">
   <a href="#equipamentos" onclick="toggleDrawer()"> Equipamentos</a>
   <a href="#aulas" onclick="toggleDrawer()"> Aulas de Surf</a>
@@ -558,7 +524,6 @@
   <a href="#contato" onclick="toggleDrawer()"> Contato</a>
 </div>
 
-<!-- ══ HERO ══ -->
 <section id="hero">
   <div class="hero-bubbles" aria-hidden="true" id="bubbles"></div>
   <div class="hero-content" data-reveal>
@@ -588,13 +553,13 @@
   </div>
 </section>
 
-<!-- ══ EQUIPAMENTOS ══ -->
 <section id="equipamentos" class="section section-alt">
   <div class="section-header" data-reveal>
     <span class="section-tag"> Equipamentos</span>
     <h2>Tudo para curtir a praia</h2>
     <p>Equipamentos de qualidade com retirada na loja ou entrega direto na areia.</p>
   </div>
+
   <div class="eq-filter" data-reveal>
     <button class="eq-btn active" onclick="filterEq('todos',this)">Todos</button>
     <button class="eq-btn" onclick="filterEq('surf',this)"> Surf & Água</button>
@@ -602,15 +567,19 @@
     <button class="eq-btn" onclick="filterEq('esporte',this)"> Esportes</button>
     <button class="eq-btn" onclick="filterEq('acessorio',this)"> Acessórios</button>
   </div>
+
   <div class="eq-grid" id="eqGrid">
 
-    <!-- SURF & ÁGUA -->
+    <!-- SURF -->
     <article class="eq-card" data-cat="surf" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#0077b6,#48cae4)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/prancha.webp') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Surf & Água</span>
         <h3>Prancha de Surf</h3>
         <p>Fun board, longboard e shortboard para todos os níveis. Quilhas e leash inclusos.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$40<small>/hora</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -619,11 +588,14 @@
     </article>
 
     <article class="eq-card" data-cat="surf" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#2ec4b6,#cbf3f0)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/stand up paddle.jpg') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Surf & Água</span>
         <h3>Stand Up Paddle</h3>
         <p>Pranchas SUP ideais para passeios e exercícios. Remo incluso.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$50<small>/hora</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -632,11 +604,14 @@
     </article>
 
     <article class="eq-card" data-cat="surf" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#f4a261,#ffd6a5)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/caiaque.webp') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Surf & Água</span>
         <h3>Caiaque</h3>
         <p>Simples e duplos para explorar o mar. Colete salva-vidas incluso.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$60<small>/hora</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -645,11 +620,14 @@
     </article>
 
     <article class="eq-card" data-cat="surf" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#7209b7,#c77dff)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/snorkel.jpg') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Surf & Água</span>
         <h3>Kit Snorkel</h3>
         <p>Máscara, snorkel e nadadeiras para explorar o fundo do mar.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$20<small>/hora</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -658,11 +636,14 @@
     </article>
 
     <article class="eq-card" data-cat="surf" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#06d6a0,#c8f9e5)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/roupa neoprene.jpeg') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Surf & Água</span>
         <h3>Roupa de Neoprene</h3>
         <p>Wetsuits para proteção nas águas frias. Tamanhos P ao GG disponíveis.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$30<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -671,11 +652,14 @@
     </article>
 
     <article class="eq-card" data-cat="surf" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#e63946,#ffb3c1)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/colete salva vidas.webp') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Surf & Água</span>
         <h3>Colete Salva-Vidas</h3>
         <p>Para adultos e crianças. Obrigatório em caiaques e SUP em alto mar.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$10<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -683,13 +667,16 @@
       </div>
     </article>
 
-    <!-- CONFORTO -->
+    <!-- PRAIA -->
     <article class="eq-card" data-cat="praia" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#f72585,#ffb3d1)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/guardasol.webp') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Conforto de Praia</span>
         <h3>Cadeira + Guarda-Sol</h3>
         <p>Kit completo com 2 cadeiras reclináveis e guarda-sol para o dia todo.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$35<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -698,11 +685,14 @@
     </article>
 
     <article class="eq-card" data-cat="praia" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#ffd166,#fff3b0)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/tenta e praia.webp') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Conforto de Praia</span>
         <h3>Tenda de Praia Anti-UV</h3>
         <p>Proteção total do sol para a família. Ideal para bebês e crianças.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$45<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -711,11 +701,14 @@
     </article>
 
     <article class="eq-card" data-cat="praia" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#80b918,#ccf381)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/cooler.webp') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Conforto de Praia</span>
         <h3>Cooler / Caixa Térmica</h3>
         <p>Mantenha bebidas e alimentos gelados o dia inteiro na praia.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$20<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -724,11 +717,14 @@
     </article>
 
     <article class="eq-card" data-cat="praia" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#f4845f,#ffd6c0)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/canga.webp') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Conforto de Praia</span>
         <h3>Canga Premium</h3>
-        <p>Cangas grandes com estampas exclusivas da Loja da Praia. Cor e estilo!</p>
+        <p>Cangas grandes com estampas exclusivas da Loja da Praia.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$15<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -737,11 +733,14 @@
     </article>
 
     <article class="eq-card" data-cat="praia" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#ef476f,#ffb3c1)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/chapeu de praia.webp') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Conforto de Praia</span>
         <h3>Chapéu de Praia</h3>
-        <p>Chapéus de palha e bonés com proteção UV. Estilo e conforto garantidos.</p>
+        <p>Chapéus de palha e bonés com proteção UV.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$10<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -750,11 +749,14 @@
     </article>
 
     <article class="eq-card" data-cat="praia" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#ff99c8,#ffccee)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/boia.webp') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Conforto de Praia</span>
         <h3>Boia Inflável</h3>
-        <p>Boias divertidas: flamingo, abacaxi e unicórnio. Sucesso total na praia!</p>
+        <p>Boias divertidas para curtir na água.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$18<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -764,11 +766,14 @@
 
     <!-- ESPORTES -->
     <article class="eq-card" data-cat="esporte" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#ffd60a,#fff480)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/kit volei de praia.jpg') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Esportes de Praia</span>
         <h3>Kit Vôlei de Praia</h3>
-        <p>Rede portátil, postes e bola oficial. Monte sua quadra onde quiser.</p>
+        <p>Rede portátil, postes e bola oficial.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$30<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -777,11 +782,14 @@
     </article>
 
     <article class="eq-card" data-cat="esporte" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#4cc9f0,#caf0f8)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/raquete frescobol.webp') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Esportes de Praia</span>
         <h3>Frescobol / Raquetinha</h3>
-        <p>Par de raquetes com bola. Diversão clássica para toda a família!</p>
+        <p>Par de raquetes com bola para diversão clássica.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$15<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -790,11 +798,14 @@
     </article>
 
     <article class="eq-card" data-cat="esporte" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#80b918,#ccf381)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/bicicleta.webp') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Esportes de Praia</span>
         <h3>Bicicleta</h3>
-        <p>Bikes adulto e infantil para passeio pela orla. Capacete incluso.</p>
+        <p>Bikes adulto e infantil para passeio pela orla.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$25<small>/hora</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -803,11 +814,14 @@
     </article>
 
     <article class="eq-card" data-cat="esporte" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#e9c46a,#f4a261)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/pipa.jpeg') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Esportes de Praia</span>
         <h3>Pipa / Arraia</h3>
-        <p>Pipas coloridas para soltar na brisa praiana. Diversão de toda geração!</p>
+        <p>Pipas coloridas para soltar na brisa praiana.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$12<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -816,11 +830,14 @@
     </article>
 
     <article class="eq-card" data-cat="esporte" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#e63946,#ffa0a8)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/kit pesca.jpg') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Esportes de Praia</span>
         <h3>Kit Pesca</h3>
-        <p>Vara, linha, anzóis e isca artificial. Para os apaixonados pelo mar.</p>
+        <p>Vara, linha, anzóis e isca artificial.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$25<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -830,11 +847,14 @@
 
     <!-- ACESSÓRIOS -->
     <article class="eq-card" data-cat="acessorio" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#023e6b,#48cae4)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/dry bag.jpg') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Acessórios</span>
         <h3>Mochila à Prova d'Água</h3>
-        <p>Dry bag impermeável para proteger celular, documentos e pertences no mar.</p>
+        <p>Dry bag impermeável para proteger seus pertences.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$15<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -843,11 +863,14 @@
     </article>
 
     <article class="eq-card" data-cat="acessorio" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#f4a261,#ffd6a5)">🪣</div>
+      <div class="eq-thumb"
+      style="background:url('img/kit castelo de areia.jpg') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Acessórios</span>
         <h3>Kit Castelo de Areia</h3>
-        <p>Balde, pá, radinhos e forminhas para a criançada construir na areia!</p>
+        <p>Balde, pá e acessórios para as crianças brincarem.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$8<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -856,11 +879,14 @@
     </article>
 
     <article class="eq-card" data-cat="acessorio" data-reveal>
-      <div class="eq-thumb" style="background:linear-gradient(135deg,#4cc9f0,#caf0f8)"></div>
+      <div class="eq-thumb"
+      style="background:url('img/go pro.png') center/cover;"></div>
+
       <div class="eq-body">
         <span class="eq-cat">Acessórios</span>
         <h3>GoPro à Prova d'Água</h3>
-        <p>Registre suas ondas! Câmera com suporte de prancha e caixa estanque.</p>
+        <p>Registre suas ondas com qualidade profissional.</p>
+
         <div class="eq-footer">
           <div class="eq-price">R$60<small>/dia</small></div>
           <a class="btn-res" href="#reservas">Reservar</a>
@@ -871,7 +897,6 @@
   </div>
 </section>
 
-<!-- ══ AULAS ══ -->
 <section id="aulas" class="section">
   <div class="section-header" data-reveal>
     <span class="section-tag"> Escola de Surf</span>
@@ -987,34 +1012,90 @@
     <h2>Momentos inesquecíveis</h2>
     <p>Fotos reais dos nossos alunos, equipamentos e a linda paisagem local.</p>
   </div>
+
   <div class="galeria-masonry" data-reveal>
-    <div class="gal-cell span2" style="background:linear-gradient(135deg,#0077b6,#48cae4)" data-emoji="" data-cap="Bruno em ação — aula de surf ao pôr do sol">
+
+    <div class="gal-cell span2"
+      style="
+        background:
+        linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+        url('img/bruno surfnado.jpg') center/cover no-repeat;"
+      data-cap="Bruno em ação — aula de surf ao pôr do sol">
       <div class="cap">📸 Bruno em ação — aula ao pôr do sol</div>
     </div>
-    <div class="gal-cell" style="background:linear-gradient(135deg,#f4a261,#ffd6a5)" data-emoji="" data-cap="Amanhecer na praia">
+
+    <div class="gal-cell"
+      style="
+        background:
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+        url('img/amanhacer na praia.jpg') center/cover no-repeat;"
+      data-cap="Amanhecer na praia">
       <div class="cap">Amanhecer na praia</div>
     </div>
-    <div class="gal-cell" style="background:linear-gradient(135deg,#2ec4b6,#cbf3f0)" data-emoji="" data-cap="Stand Up Paddle no mar calmo">
-      <div class="cap"> SUP no mar calmo</div>
+
+    <div class="gal-cell"
+      style="
+        background:
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+        url('img/sup no mar calmo.jpeg') center/cover no-repeat;"
+      data-cap="Stand Up Paddle no mar calmo">
+      <div class="cap">SUP no mar calmo</div>
     </div>
-    <div class="gal-cell" style="background:linear-gradient(135deg,#f72585,#ffb3d1)" data-emoji="" data-cap="Família curtindo a praia">
-      <div class="cap"> Família na praia</div>
+
+    <div class="gal-cell"
+      style="
+        background:
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+        url('img/familia na praia.jpg') center/cover no-repeat;"
+      data-cap="Família curtindo a praia">
+      <div class="cap">Família na praia</div>
     </div>
-    <div class="gal-cell" style="background:linear-gradient(135deg,#7209b7,#c77dff)" data-emoji="" data-cap="Snorkel nas pedras">
-      <div class="cap"> Snorkel nas pedras</div>
+
+    <div class="gal-cell"
+      style="
+        background:
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+        url('img/snorkel em pedras.jpg') center/cover no-repeat;"
+      data-cap="Snorkel nas pedras">
+      <div class="cap">Snorkel nas pedras</div>
     </div>
-    <div class="gal-cell" style="background:linear-gradient(135deg,#ffd166,#fff480)" data-emoji="" data-cap="Torneio de vôlei de praia">
-      <div class="cap"> Torneio de vôlei</div>
+
+    <div class="gal-cell"
+      style="
+        background:
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+        url('img/torneio de volei de praia.jpg') center/cover no-repeat;"
+      data-cap="Torneio de vôlei de praia">
+      <div class="cap">Torneio de vôlei</div>
     </div>
-    <div class="gal-cell" style="background:linear-gradient(135deg,#06d6a0,#c8f9e5)" data-emoji="" data-cap="Turma kids no surf">
+
+    <div class="gal-cell"
+      style="
+        background:
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+        url('img/crianças sufando.jpeg') center/cover no-repeat;"
+      data-cap="Turma kids no surf">
       <div class="cap">Turma kids no surf</div>
     </div>
-    <div class="gal-cell" style="background:linear-gradient(135deg,#e63946,#ff9fc8)" data-emoji="" data-cap="Passeio de caiaque ao entardecer">
+
+    <div class="gal-cell"
+      style="
+        background:
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+        url('img/caiaque ao anoitecer.avif') center/cover no-repeat;"
+      data-cap="Passeio de caiaque ao entardecer">
       <div class="cap">Caiaque ao entardecer</div>
     </div>
-    <div class="gal-cell" style="background:linear-gradient(135deg,#023e6b,#0077b6)" data-emoji="" data-cap="Ondas perfeitas para surfar">
-      <div class="cap"> Ondas perfeitas</div>
+
+    <div class="gal-cell"
+      style="
+        background:
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+        url('img/ondas perfeitas.jpg') center/cover no-repeat;"
+      data-cap="Ondas perfeitas para surfar">
+      <div class="cap">Ondas perfeitas</div>
     </div>
+
   </div>
 </section>
 
@@ -1169,7 +1250,7 @@
   </div>
 </section>
 
-<!-- ══ DEPOIMENTOS ══ -->
+<!-- ══ Avaliações ══ -->
 <section id="depoimentos" class="section section-alt">
   <div class="section-header" data-reveal>
     <span class="section-tag">Depoimentos</span>
@@ -1328,7 +1409,7 @@
 </footer>
 
 <script>
-/* ══ NAV SCROLL ══ */
+
 const nav = document.getElementById('nav');
 const navLinks = document.querySelectorAll('.nav-links a');
 const sections = document.querySelectorAll('section[id]');
@@ -1340,12 +1421,12 @@ window.addEventListener('scroll', () => {
   navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
 }, {passive:true});
 
-/* ══ DRAWER ══ */
+
 function toggleDrawer(){
   document.getElementById('drawer').classList.toggle('open');
 }
 
-/* ══ HERO BUBBLES ══ */
+
 (function(){
   const c = document.getElementById('bubbles');
   for(let i=0;i<18;i++){
@@ -1359,7 +1440,7 @@ function toggleDrawer(){
   }
 })();
 
-/* ══ COUNTER ANIMATION ══ */
+
 function animateCounters(){
   document.querySelectorAll('[data-count]').forEach(el => {
     const target = +el.dataset.count;
@@ -1379,7 +1460,7 @@ const heroObs = new IntersectionObserver(e => {
 });
 heroObs.observe(document.getElementById('hero'));
 
-/* ══ SCROLL REVEAL ══ */
+
 const revObs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); revObs.unobserve(e.target); }});
 }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
@@ -1388,7 +1469,7 @@ document.querySelectorAll('[data-reveal]').forEach((el,i) => {
   revObs.observe(el);
 });
 
-/* ══ EQ FILTER ══ */
+
 function filterEq(cat, btn){
   document.querySelectorAll('.eq-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
@@ -1398,12 +1479,12 @@ function filterEq(cat, btn){
     c.style.animation = show ? 'fadeIn .35s ease' : 'none';
   });
 }
-/* inject fadeIn */
+
 const style = document.createElement('style');
 style.textContent = '@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}';
 document.head.appendChild(style);
 
-/* ══ LIGHTBOX ══ */
+
 document.querySelectorAll('.gal-cell').forEach(cell => {
   cell.addEventListener('click', () => {
     document.getElementById('lbEmoji').textContent = cell.dataset.emoji;
@@ -1419,7 +1500,7 @@ function closeLightbox(){
 document.getElementById('lightbox').addEventListener('click', e => { if(e.target === e.currentTarget) closeLightbox(); });
 document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
 
-/* ══ TOAST / FORM ══ */
+
 function sendForm(btn){
   btn.classList.add('loading');
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando…';
@@ -1440,11 +1521,11 @@ function showToast(){
   setTimeout(() => t.classList.remove('show'), 4500);
 }
 
-/* ══ MIN DATE ══ */
+
 const today = new Date().toISOString().split('T')[0];
 document.querySelectorAll('input[type=date]').forEach(i => i.setAttribute('min', today));
 
-/* ══ STEPPER INTERACTION ══ */
+
 document.querySelectorAll('.res-form select, .res-form input').forEach((el,i) => {
   el.addEventListener('change', () => {
     const dots = document.querySelectorAll('.step-dot');
