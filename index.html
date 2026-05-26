@@ -43,13 +43,13 @@
   .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
 
   /* NAV bar */
-  #nav{
-    position:fixed;top:0;inset-inline:0;z-index:900;height:var(--nav-h);
-    display:flex;align-items:center;justify-content:space-between;
-    padding-inline:5%;
-    background:rgba(1,42,74,.0);
-    backdrop-filter:blur(0px);
-    transition:background var(--transition),backdrop-filter var(--transition),box-shadow var(--transition);
+  #nav {
+  position: fixed; top: 0; inset-inline: 0; z-index: 900; height: var(--nav-h);
+  display: flex; align-items: center; justify-content: space-between;
+  padding-inline: 2%; /* Reduzido de 5% para 2% para aproveitar as bordas da tela */
+  background: rgba(1,42,74,.0);
+  backdrop-filter: blur(0px);
+  transition: background var(--transition), backdrop-filter var(--transition), box-shadow var(--transition);
   }
   #nav.scrolled{
     background:rgba(1,42,74,.96);
@@ -59,16 +59,31 @@
   .nav-logo{display:flex;align-items:center;gap:.5rem;font-size:1.35rem;font-weight:900;color:#fff;letter-spacing:.5px;}
   .nav-logo .wave{color:var(--c-teal);animation:waveAnim 2.4s ease-in-out infinite;}
   @keyframes waveAnim{0%,100%{transform:rotate(0deg)}30%{transform:rotate(20deg)}60%{transform:rotate(-15deg)}}
-  .nav-links{display:flex;gap:.2rem;align-items:center;}
-  .nav-links a{
-    color:rgba(255,255,255,.8);font-size:.83rem;font-weight:500;padding:.4rem .75rem;
-    border-radius:var(--radius-sm);transition:var(--transition);
+  .nav-links {
+    display: flex;
+    gap: 0.1rem; 
+    align-items: center;
+  }
+  .nav-links a {
+    color: rgba(255, 255, 255, .8);
+    font-size: 0.78rem; 
+    font-weight: 500;
+    padding: .4rem .5rem; 
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    white-space: nowrap; 
   }
   .nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.12);}
-  .nav-cta{
-    background:var(--c-sand);color:var(--c-navy);
-    padding:.42rem 1.1rem;border-radius:20px;font-weight:700;font-size:.83rem;
-    transition:var(--transition);white-space:nowrap;border:none;
+  .nav-cta {
+    background: var(--c-sand);
+    color: var(--c-navy);
+    padding: .42rem .8rem; 
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.78rem; 
+    transition: var(--transition);
+    white-space: nowrap;
+    border: none;
   }
   .nav-cta:hover{background:var(--c-sand-lt);transform:translateY(-1px);}
   .nav-burger{display:none;background:none;border:none;color:#fff;font-size:1.4rem;padding:.25rem;}
@@ -468,16 +483,16 @@
     .gal-cell.span2{grid-column:span 2;font-size:5rem;}
     .form-card{position:static;}
   }
-  @media(max-width:640px){
-    .nav-links,.nav-cta{display:none;}
-    .nav-burger{display:block;}
-    .nav-drawer{display:flex;}
-    .section{padding:65px 5%;}
-    .galeria-masonry{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;}
-    .flt-row,.field-row{grid-template-columns:1fr;}
-    .footer-grid{grid-template-columns:1fr;}
-    .hero-stats{gap:1.2rem;}
-    .hero-stat strong{font-size:1.6rem;}
+  @media(max-width:1024px){
+  .nav-links,.nav-cta{display:none;}
+  .nav-burger{display:block;}
+  .nav-drawer{display:flex;}
+  .section{padding:65px 5%;}
+  .galeria-masonry{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;}
+  .flt-row,.field-row{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .hero-stats{gap:1.2rem;}
+  .hero-stat strong{font-size:1.6rem;}
   }
   </style>
 </head>
@@ -653,7 +668,7 @@
 
     <article class="eq-card" data-cat="surf" data-reveal>
       <div class="eq-thumb"
-      style="background:url('img/colete salva vidas.webp') center/cover;"></div>
+      style="background:url('img/coletesalva-vidas.webp') center/cover;"></div>
 
       <div class="eq-body">
         <span class="eq-cat">Surf & Água</span>
@@ -1021,16 +1036,7 @@
         linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
         url('img/bruno surfnado.jpg') center/cover no-repeat;"
       data-cap="Bruno em ação — aula de surf ao pôr do sol">
-      <div class="cap">📸 Bruno em ação — aula ao pôr do sol</div>
-    </div>
-
-    <div class="gal-cell"
-      style="
-        background:
-        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
-        url('img/amanhacer na praia.jpg') center/cover no-repeat;"
-      data-cap="Amanhecer na praia">
-      <div class="cap">Amanhecer na praia</div>
+      <div class="cap">Bruno em ação — aula ao pôr do sol</div>
     </div>
 
     <div class="gal-cell"
@@ -1046,6 +1052,15 @@
       style="
         background:
         linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
+        url('img/agua.jpg') center/cover no-repeat;"
+      data-cap="Stand Up Paddle no mar calmo">
+      <div class="cap">Família</div>
+    </div>
+
+    <div class="gal-cell"
+      style="
+        background:
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
         url('img/familia na praia.jpg') center/cover no-repeat;"
       data-cap="Família curtindo a praia">
       <div class="cap">Família na praia</div>
@@ -1055,7 +1070,7 @@
       style="
         background:
         linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),
-        url('img/snorkel em pedras.jpg') center/cover no-repeat;"
+        url('img/snorkelnaspedras.jpg') center/cover no-repeat;"
       data-cap="Snorkel nas pedras">
       <div class="cap">Snorkel nas pedras</div>
     </div>
